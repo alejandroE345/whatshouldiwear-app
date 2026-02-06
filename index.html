@@ -3,118 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Should I Wear This?</title>
+    <title>What Should I Wear - Streetwear Under $100</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="main-header">
+    <header class="header">
         <div class="container">
-            <h1 class="logo">Should I Wear This?</h1>
-            <nav class="nav-menu">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#" class="nav-link">My Outfits</a>
-                <a href="#" class="nav-link">Cart (3)</a>
-                <a href="#" class="nav-link">Profile</a>
-            </nav>
+            <h1 class="logo">WHAT SHOULD I WEAR</h1>
+            <div class="budget-tracker">
+                <span class="budget-text">Budget Remaining</span>
+                <span class="budget-amount">$73</span>
+            </div>
         </div>
     </header>
 
-    <main class="main-content">
-        <section class="aesthetic-selector">
-            <div class="container">
-                <h2>Choose Your Aesthetic</h2>
-                <div class="aesthetic-buttons">
-                    <button class="aesthetic-btn active">Minimalist</button>
-                    <button class="aesthetic-btn">Streetwear</button>
-                    <button class="aesthetic-btn">Vintage</button>
-                    <button class="aesthetic-btn">Preppy</button>
-                    <button class="aesthetic-btn">Boho</button>
-                    <button class="aesthetic-btn">Gothic</button>
+    <main class="main">
+        <div class="container">
+            <section class="filters">
+                <h2 class="section-title">FIND YOUR VIBE</h2>
+                <div class="filter-grid">
+                    <button class="filter-btn active">ALL LOOKS</button>
+                    <button class="filter-btn">CASUAL</button>
+                    <button class="filter-btn">STREET</button>
+                    <button class="filter-btn">MINIMAL</button>
                 </div>
-            </div>
-        </section>
+                <div class="brand-filters">
+                    <button class="brand-btn active">H&M</button>
+                    <button class="brand-btn">UNIQLO</button>
+                    <button class="brand-btn">ZARA</button>
+                </div>
+            </section>
 
-        <section class="brands-section">
-            <div class="container">
-                <h3>Popular Minimalist Brands</h3>
-                <div class="brands-grid">
-                    <div class="brand-card">
-                        <img src="https://via.placeholder.com/100x60/f0f0f0/666?text=UNIQLO" alt="Brand Logo">
-                        <p>UNIQLO</p>
+            <section class="outfit-showcase">
+                <div class="outfit-card featured">
+                    <div class="outfit-image">
+                        <div class="placeholder-img">OUTFIT PHOTO</div>
+                        <div class="price-tag">$87</div>
                     </div>
-                    <div class="brand-card">
-                        <img src="https://via.placeholder.com/100x60/f0f0f0/666?text=MUJI" alt="Brand Logo">
-                        <p>MUJI</p>
-                    </div>
-                    <div class="brand-card">
-                        <img src="https://via.placeholder.com/100x60/f0f0f0/666?text=COS" alt="Brand Logo">
-                        <p>COS</p>
-                    </div>
-                    <div class="brand-card">
-                        <img src="https://via.placeholder.com/100x60/f0f0f0/666?text=EVERLANE" alt="Brand Logo">
-                        <p>EVERLANE</p>
+                    <div class="outfit-info">
+                        <h3 class="outfit-title">URBAN ESSENTIALS</h3>
+                        <p class="outfit-desc">Clean streetwear with oversized hoodie, slim jeans, and fresh kicks</p>
+                        <button class="shop-btn">GET THIS LOOK</button>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="outfit-builder">
-            <div class="container">
-                <h3>Build Your Outfit</h3>
-                <div class="builder-layout">
-                    <div class="clothing-categories">
-                        <div class="category">
-                            <h4>Tops</h4>
-                            <div class="clothing-items">
-                                <div class="clothing-item">
-                                    <img src="https://via.placeholder.com/120x150/e8e8e8/666?text=Basic+Tee" alt="Basic Tee">
-                                    <p>Basic White Tee</p>
-                                    <span class="price">$25</span>
-                                    <button class="add-to-outfit">Add to Outfit</button>
-                                </div>
-                                <div class="clothing-item">
-                                    <img src="https://via.placeholder.com/120x150/e8e8e8/666?text=Sweater" alt="Sweater">
-                                    <p>Cashmere Sweater</p>
-                                    <span class="price">$89</span>
-                                    <button class="add-to-outfit">Add to Outfit</button>
-                                </div>
-                            </div>
+                <div class="outfit-grid">
+                    <div class="outfit-card">
+                        <div class="outfit-image">
+                            <div class="placeholder-img">LOOK #2</div>
+                            <div class="price-tag">$64</div>
                         </div>
-
-                        <div class="category">
-                            <h4>Bottoms</h4>
-                            <div class="clothing-items">
-                                <div class="clothing-item">
-                                    <img src="https://via.placeholder.com/120x150/e8e8e8/666?text=Jeans" alt="Jeans">
-                                    <p>Slim Fit Jeans</p>
-                                    <span class="price">$65</span>
-                                    <button class="add-to-outfit">Add to Outfit</button>
-                                </div>
-                                <div class="clothing-item">
-                                    <img src="https://via.placeholder.com/120x150/e8e8e8/666?text=Trousers" alt="Trousers">
-                                    <p>Black Trousers</p>
-                                    <span class="price">$75</span>
-                                    <button class="add-to-outfit">Add to Outfit</button>
-                                </div>
-                            </div>
-                        </div>
+                        <h4 class="outfit-name">MINIMAL FLEX</h4>
+                        <button class="shop-btn small">SHOP NOW</button>
                     </div>
 
-                    <div class="outfit-preview">
-                        <h4>Your Outfit</h4>
-                        <div class="outfit-display">
-                            <div class="outfit-placeholder">
-                                <p>Select items to build your outfit</p>
-                            </div>
-                            <div class="outfit-total">
-                                <p>Total: $0</p>
-                                <button class="buy-outfit-btn">Buy This Outfit</button>
-                            </div>
+                    <div class="outfit-card">
+                        <div class="outfit-image">
+                            <div class="placeholder-img">LOOK #3</div>
+                            <div class="price-tag">$92</div>
+                        </div>
+                        <h4 class="outfit-name">LAYERED UP</h4>
+                        <button class="shop-btn small">SHOP NOW</button>
+                    </div>
+
+                    <div class="outfit-card">
+                        <div class="outfit-image">
+                            <div class="placeholder-img">LOOK #4</div>
+                            <div class="price-tag">$78</div>
+                        </div>
+                        <h4 class="outfit-name">RETRO VIBES</h4>
+                        <button class="shop-btn small">SHOP NOW</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="item-breakdown">
+                <h2 class="section-title">FEATURED PIECES</h2>
+                <div class="items-grid">
+                    <div class="item-card">
+                        <div class="item-image">HOODIE</div>
+                        <div class="item-info">
+                            <h5>Oversized Hoodie</h5>
+                            <p class="brand">H&M</p>
+                            <span class="price">$29</span>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image">JEANS</div>
+                        <div class="item-info">
+                            <h5>Slim Fit Jeans</h5>
+                            <p class="brand">UNIQLO</p>
+                            <span class="price">$39</span>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-image">SHOES</div>
+                        <div class="item-info">
+                            <h5>Canvas Sneakers</h5>
+                            <p class="brand">H&M</p>
+                            <span class="price">$19</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 </body>
 </html>
