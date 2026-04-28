@@ -9,8 +9,10 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #ffffff;
-    background-color: #0a0a0a;
+    background-color: #082d51;
     font-weight: 400;
+    transition: 500ms ease-in;
+    
 }
 
 .container {
