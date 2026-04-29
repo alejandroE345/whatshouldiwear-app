@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - What Should I Wear?</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    
+    <h1>Log In</h1>
+    <form class="log-in">
+        <label for="emailaddress">Email</label>
+        <input type="email" id="emailaddress"> <br>
+        <label for="password">Password</label>
+        <input type="password" id="password"> <br>
+        <button onclick="userInput(event)">Log In</button>
+    </form>
+    <h2>Don't Have an Account?</h2>
+    <button onclick="document.location='index.html'" id="login">Continue to App as Guest</button>
+    <script src="script.js"></script>
 </body>
 </html>
