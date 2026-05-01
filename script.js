@@ -20,11 +20,17 @@ function userInput(event) {
 // Function to redirect the user to the app after logging in
 function redirectUser() {
     console.log("click");
+    //Declaring variables
+    let emailInput = document.getElementById("emailaddress");
+    let passInput = document.getElementById("password");
+
+    let email = emailInput.value;
+    let pwd = passInput.value;
     //Checks is the user's login info matches
-    if (email == emailInput.value && pwd == passInput.value) {
+    if (email == emailInput.value & pwd == passInput.value) {
         window.location.href = "index.html";
     } else {
-        alert("Email or Password is incorrect!");
+        alert("Incorrecr username or password!");
     }
     let redirectButton = document.getElementById("login");
     redirectButton.addEventListener("click", redirectUser);

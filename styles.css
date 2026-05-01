@@ -9,7 +9,7 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #ffffff;
-    background-color: #082d51;
+    background-color: #476755;
     font-weight: 400;
     transition: 500ms ease-in;
     
@@ -43,6 +43,7 @@ body {
     font-weight: 700;
     color: #ffffff;
     letter-spacing: -0.5px;
+    font-family: monospace;
 }
 
 .nav-menu {

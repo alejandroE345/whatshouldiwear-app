@@ -1,12 +1,19 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: black;
+    background-color: rgb(23, 23, 23);
     color: whitesmoke;
     font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+.copyright {
+    justify-content: start;
+    top: 0;
+    bottom: 0;
 }
 
+img {
+    height: 250px;
+}
+
+.vans {
+    height: 200px;
+}
