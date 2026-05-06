@@ -384,3 +384,16 @@ body {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 }
+
+.log-in {
+    background-color: black;
+    color: whitesmoke;
+    height: 40px;
+}
+
+img {
+    height: 250px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    border: solid black 2px;
+}

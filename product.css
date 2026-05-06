@@ -14,11 +14,29 @@ img {
     background-color: whitesmoke;
     border-radius: 15px;
     border: black solid 2px;
-    display: flex;
+    position: absolute;
     
 }
 
-p {
+.headers {
+    
+
+}
+
+.description-shoes{
     position: absolute;
+    left: 30%;
+    right: 10%;
+    font-size: 20px;
+}
+
+.credits {
+    position: absolute;
+    left: 60%;
+    bottom: 5%;
+    
+}
+
+.details {
     
 }
