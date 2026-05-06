@@ -30,8 +30,22 @@ function redirectUser() {
     if (email == emailInput.value & pwd == passInput.value) {
         window.location.href = "index.html";
     } else {
-        alert("Incorrecr username or password!");
-    }
+        alert("Incorrect username or password!");
+    } 
     let redirectButton = document.getElementById("login");
     redirectButton.addEventListener("click", redirectUser);
+}
+
+function filterOutfits() {
+    //Get all outfit cards
+    let outfitCards = document.getElementsByClassName("outfit-card");
+
+    //Loop through each card
+    for (let i = 0; i < outfitCards.length; i++) {
+
+    }
+
+    //Adding event listener to a filter button
+    let casualButton = document.getElementById("casual-btn");
+    casualButton.addEventListener("click", filterOutfits);
 }
