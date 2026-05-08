@@ -36,16 +36,29 @@ function redirectUser() {
     redirectButton.addEventListener("click", redirectUser);
 }
 
-function filterOutfits() {
+function filterOutfits(category) {
     //Get all outfit cards
     let outfitCards = document.getElementsByClassName("outfit-card");
 
     //Loop through each card
     for (let i = 0; i < outfitCards.length; i++) {
-
+       if (category == "all") {
+        outfitCards[i].style.display = "block";
+       } else {
+        outfitCards[i].style.display = "none";
+       }
     }
 
-    //Adding event listener to a filter button
-    let casualButton = document.getElementById("casual-btn");
-    casualButton.addEventListener("click", filterOutfits);
 }
+//Adding event listener to a filter button
+    let casualButton = document.getElementById("casual-btn");
+    casualButton.addEventListener("click", filterOutfits("casual"));
+
+    let allButton = document.getElementById("all-btn");
+    allButton.addEventListener("click", filterOutfits("all"));
+
+    let streetButton = document.getElementById("street");
+    streetButton.addEventListener("click", filterOutfits("street"));
+
+    let y2kButton = document.getElementById("y2k");
+    y2kButton.addEventListener("click", filterOutfits("y2k"));
