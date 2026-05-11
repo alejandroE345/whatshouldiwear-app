@@ -4,30 +4,44 @@ console.log("Script Started");
 function userInput(event) {
     console.log("click");
     event.preventDefault();
-    let emailInput = document.getElementById("emailaddress");
+    let nameInput = document.getElementById("username");
     let passInput = document.getElementById("password");
 
-   let email = emailInput.value;
+   let name = nameInput.value;
    let pwd = passInput.value;
 
-   console.log(email);
+   console.log(name);
    console.log(pwd);
-   
+
    alert("Logged in! Redirecting...")
    redirectUser();
 }
+
+// Function to save the login info
+function saveInfo() {
+    let nameInput = document.getElementById("username");
+    let passInput = document.getElementById("password");
+
+    //Save to local storage
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
+
+   
+}
+ let submitButton = document.getElementById("submit-btn");
+    submitButton.addEventListener("click", saveInfo);
 
 // Function to redirect the user to the app after logging in
 function redirectUser() {
     console.log("click");
     //Declaring variables
-    let emailInput = document.getElementById("emailaddress");
+    let nameInput = document.getElementById("username");
     let passInput = document.getElementById("password");
 
-    let email = emailInput.value;
+    let name = emailInput.value;
     let pwd = passInput.value;
     //Checks is the user's login info matches
-    if (email == emailInput.value & pwd == passInput.value) {
+    if (name == nameInput.value & pwd == passInput.value) {
         window.location.href = "index.html";
     } else {
         alert("Incorrect username or password!");
@@ -45,20 +59,33 @@ function filterOutfits(category) {
        if (category == "all") {
         outfitCards[i].style.display = "block";
        } else {
-        outfitCards[i].style.display = "none";
+        if (outfitCards[i].classList.contains(category)) {
+            outfitCards[i].style.display = "block";
+        } else {
+            outfitCards[i].style.display = "none";
+        }
        }
     }
 
 }
-//Adding event listener to a filter button
-    let casualButton = document.getElementById("casual-btn");
-    casualButton.addEventListener("click", filterOutfits("casual"));
+    //Adding event listener to the filter buttons
+    let allButton = document.getElementById("all-looks");
+    allButton.addEventListener("click", function() {
+        filterOutfits("all");
+    });
 
-    let allButton = document.getElementById("all-btn");
-    allButton.addEventListener("click", filterOutfits("all"));
+    let casualButton = document.getElementById("casual");
+    casualButton.addEventListener("click", function(){
+        filterOutfits("casual");
+    });
 
     let streetButton = document.getElementById("street");
-    streetButton.addEventListener("click", filterOutfits("street"));
+    streetButton.addEventListener("click", function(){
+        filterOutfits("street");
+    });
 
     let y2kButton = document.getElementById("y2k");
-    y2kButton.addEventListener("click", filterOutfits("y2k"));
+    y2kButton.addEventListener("click", function(){
+        filterOutfits("y2k");
+    });
+   
