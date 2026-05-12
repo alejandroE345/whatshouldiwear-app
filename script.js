@@ -1,55 +1,18 @@
 console.log("Script Started");
+//Check if user is logged in
+let savedUser = localStorage.getItem("username");
 
-// Function to allow the user to log in to their account
-function userInput(event) {
-    console.log("click");
-    event.preventDefault();
-    let nameInput = document.getElementById("username");
-    let passInput = document.getElementById("password");
-
-   let name = nameInput.value;
-   let pwd = passInput.value;
-
-   console.log(name);
-   console.log(pwd);
-
-   alert("Logged in! Redirecting...")
-   redirectUser();
+if (savedUser == null) {
+    window.location.href = "login.html";
+} else {
+    let welcomeMessage = document.getElementById("welcome");
+    if (welcomeMessage) {
+        welcomeMessage.innerText = "Welcome, " + savedUser + "!";
+    }
 }
 
-// Function to save the login info
-function saveInfo() {
-    let nameInput = document.getElementById("username");
-    let passInput = document.getElementById("password");
 
-    //Save to local storage
-    localStorage.setItem("username", username);
-    localStorage.setItem("password", password);
-
-   
-}
- let submitButton = document.getElementById("submit-btn");
-    submitButton.addEventListener("click", saveInfo);
-
-// Function to redirect the user to the app after logging in
-function redirectUser() {
-    console.log("click");
-    //Declaring variables
-    let nameInput = document.getElementById("username");
-    let passInput = document.getElementById("password");
-
-    let name = emailInput.value;
-    let pwd = passInput.value;
-    //Checks is the user's login info matches
-    if (name == nameInput.value & pwd == passInput.value) {
-        window.location.href = "index.html";
-    } else {
-        alert("Incorrect username or password!");
-    } 
-    let redirectButton = document.getElementById("login");
-    redirectButton.addEventListener("click", redirectUser);
-}
-
+//Function to show different filters
 function filterOutfits(category) {
     //Get all outfit cards
     let outfitCards = document.getElementsByClassName("outfit-card");
@@ -66,8 +29,6 @@ function filterOutfits(category) {
         }
        }
     }
-
-}
     //Adding event listener to the filter buttons
     let allButton = document.getElementById("all-looks");
     allButton.addEventListener("click", function() {
@@ -88,4 +49,6 @@ function filterOutfits(category) {
     y2kButton.addEventListener("click", function(){
         filterOutfits("y2k");
     });
+}
+    
    
