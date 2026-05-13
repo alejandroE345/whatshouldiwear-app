@@ -1,6 +1,6 @@
 console.log("Script Started");
 //Check if user is logged in
-let savedUser = localStorage.getItem("username");
+let savedUser = localStorage.getItem("username", name);
 
 if (savedUser == null) {
     window.location.href = "login.html";

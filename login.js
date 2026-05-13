@@ -12,7 +12,8 @@ function userInput(event) {
    console.log(name);
    console.log(pwd);
 
-   alert("Logged in! Redirecting...");
+   alert("Logging in...");
+
    handleLogin();
    saveInfo();
 }
@@ -22,8 +23,12 @@ function handleLogin() {
     let nameInput = document.getElementById("username");
     let passInput = document.getElementById("password");
 
-    if (nameInput !== "" && passInput !== "") {
-        localStorage.setItem("username", username);
+    let name = nameInput.value;
+    let pwd = passInput.value;
+
+    // Check to see if user entered info
+    if (name !== "" && pwd !== "") {
+        localStorage.setItem("username", name);
         window.location.href = "index.html";
     } else {
         alert("Please enter username and password!");
@@ -34,10 +39,11 @@ function saveInfo() {
     let nameInput = document.getElementById("username");
     let passInput = document.getElementById("password");
 
-    //Save to local storage
-    localStorage.getItem("username", username);
-    localStorage.getItem("password", password);
+    let name = nameInput.value;
+    let pwd = passInput.value;
 
-   let submitButton = document.getElementById("submit-btn");
-    submitButton.addEventListener("click", saveInfo);
+    //Save to local storage
+    localStorage.getItem("username", name);
+    localStorage.getItem("password", pwd);
+
 }
