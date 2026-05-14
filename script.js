@@ -51,4 +51,12 @@ function filterOutfits(category) {
     });
 }
     
+// Function to redirect user to clothing website
+function purchaseProduct() {
+    window.location.href = "https://www.vans.com/en-us/p/shoes/knu-skool-5840/knu-skool-suede-shoe-VN0009QC6BT";
+
+}
+
+let purchaseButton = document.getElementById("buy-now-btn");
+purchaseButton.addEventListener("click", purchaseButton);
    
